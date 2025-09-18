@@ -6,7 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 
 const RewardsDashboard = () => {
     const navigate = useNavigate();
-    const backend_Url = "http://localhost:8000"
+    const backend_Url = "https://381300edb6ac.ngrok-free.app"
 
     const [customers, setCustomers] = useState([]);
     const [filter, setFilter] = useState('all');
