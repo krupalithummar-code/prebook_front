@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom'
 
 const CustomerDetail = () => {
     const navigate = useNavigate();
-    const backend_Url = "https://381300edb6ac.ngrok-free.app"
+    const backend_Url = "https://prebook-zvko.vercel.app"
     const [adminData, setAdminData] = useState([])
     const [page, setPage] = useState(1)
     const [totalPages, setTotalPages] = useState(1)
