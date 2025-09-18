@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+}
+
+
+/* Admin Form Styles */
+.export-form {
+  background: #fff;
+  padding: 20px 30px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.export-form input,
+.export-form select {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.export-form button {
+  padding: 12px 16px;
+  background-color: #775d6d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.export-form button:hover {
+  background-color: #5f4a56;
+}
+
+.export-form button+button {
+  margin-left: 10px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .export-form {
+    padding: 15px;
+  }
+
+  .export-form button {
+    width: 100%;
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* login page css start */
+.login-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  padding: 25px 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  background: #f5eae0;
+}
+
+.login-wrapper h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-wrapper label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-wrapper form .field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-wrapper input {
+  width: auto;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.login-wrapper button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d7ced6;
+  color: #775d6d;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-wrapper button:hover {
+  background-color: #775d6d;
+  color: #fff;
+}
+
+/* login page css end */
+
+
+
+/* dashboard page css start */
+.dashboard-header input#search-box {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.dashboard-wrapper {
+  width: auto;
+  padding: 40px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.controls select,
+.controls button {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.controls select {
+  border: 1px solid #ccc;
+}
+
+.controls button {
+  background-color: #775d6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #5f4a56;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f0e6e0;
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.view-btn,
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #d7ced6;
+  color: #775d6d;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  margin-inline-start: 5px;
+}
+
+.view-btn:hover,
+.delete-btn:hover {
+  background-color: #775d6d;
+  color: white;
+}
+
+/* loader css */
+.ct-loader-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  min-width: 50px;
+  background-color: #e6dee000;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ct-loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcf6f1;
+  z-index: 999999;
+}
+
+.ct-loader-icon {
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ct-loader-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #775d6d;
+  border-right: 3px solid transparent;
+  animation: rotation 1s linear infinite;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .dashboard-wrapper {
+    padding: 20px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .controls select,
+  .controls button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 20px;
+  }
+
+  th,
+  td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* dashboard page css end */
+
+
+
+/* Customer detail page css start */
+.customer-detail {
+  width: auto;
+  padding: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.back-btn {
+  margin-bottom: 20px;
+  display: inline-block;
+  background-color: #d7ced6;
+  color: #775d6d;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dashboard-header button.back-btn {
+  margin: 0;
+}
+
+.remove_data {
+  cursor: pointer;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  background: white;
+  margin-top: 40px;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f0e6e0;
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .back-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  th,
+  td {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  th,
+  td {
+    font-size: 12px;
+  }
+}
+
+/* Customer detail page css end */
