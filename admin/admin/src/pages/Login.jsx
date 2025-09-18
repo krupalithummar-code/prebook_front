@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 // $2b$08$xL0dlDuB25QTbe3pf6hmPekge4yEvvnXC3wvQmY69lxSi4dNSsLie
 const Login = () => {
     const navigate = useNavigate()
-    const backend_Url = "http://localhost:8000"
+    const backend_Url = "https://381300edb6ac.ngrok-free.app"
 
     // State variable
     const [email, setEmail] = useState('')
