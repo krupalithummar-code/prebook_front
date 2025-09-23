@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom'
 
 const CustomerDetail = () => {
     const navigate = useNavigate();
-    const backend_Url = "http://localhost:8000"
+    const backend_Url = "https://prebook-zvko.vercel.app"
     const [adminData, setAdminData] = useState([])
     const [page, setPage] = useState(1)
     const [totalPages, setTotalPages] = useState(1)
@@ -17,7 +17,23 @@ const CustomerDetail = () => {
             })
             const result = await response.json()
             if (response.ok) {
-                setAdminData(result?.data || [])
+                // Format discount field before saving in state
+                const formattedData = (result?.data || []).map((item) => {
+                    if (item.discount_method === "amount") {
+                        return {
+                            ...item,
+                            discountDisplay: `₹${item.amount}`,
+                        };
+                    } else if (item.discount_method === "percentage") {
+                        return {
+                            ...item,
+                            discountDisplay: `${item.percentage}%`,
+                        };
+                    }
+                    return item;
+                });
+
+                setAdminData(formattedData)
                 setPage(result.pagination.page)
                 setTotalPages(result.pagination.totalPages)
             } else {
@@ -82,9 +98,9 @@ const CustomerDetail = () => {
                     {adminData.map((item, i) => (
                         <tr key={i}>
                             <td>{item.email}</td>
-                            <td>{item.productIdPrebook}</td>
-                            <td>{item.productIdMain}</td>
-                            <td>{item.amount}</td>
+                            <td>{item.productTitlePrebook}</td>
+                            <td>{item.productTitleMain}</td>
+                            <td>{item.discountDisplay}</td>
                             <td>{item.created}</td>
                             <td className="remove_data text-center">
                                 <svg

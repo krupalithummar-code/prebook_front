@@ -479,4 +479,10 @@ tr:last-child td {
   }
 }
 
+
+.ct-discount_method_field select, .ct-discount_method_field input {
+  min-height: 38px;
+  padding: 5px 10px;
+}
+
 /* Customer detail page css end */
